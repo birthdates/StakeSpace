@@ -19,7 +19,7 @@ It is a [Rust](https://store.steampowered.com/agecheck/app/252490/) gambling sit
 ### Stack
 * Redis
 * NextJS
-* NextJS
+* NodeJS (18.17.0+)
 * socket.io
 * Tailwind CSS
 * clsxx
@@ -30,6 +30,7 @@ It is a [Rust](https://store.steampowered.com/agecheck/app/252490/) gambling sit
 * Steam-Trafeoffer-Manager
 * Steam-User
 * websocket (ws)
+* sharp
 
 ## Steam Bot
 * Remove steam guard if active.

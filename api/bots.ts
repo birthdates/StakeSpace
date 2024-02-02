@@ -368,7 +368,6 @@ const createClient = (account: SteamAccount) => {
     pollInterval: 1000 * 10,
     language: "en",
   });
-  console.log(account, SteamTotp.generateAuthCode(account.sharedSecret));
   client.logOn({
     accountName: account.username,
     password: account.password,
