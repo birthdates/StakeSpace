@@ -1,0 +1,317 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #e278a6;
+  --accent-color: #c2296b;
+  --secondary-color: #141414;
+  --text-color: #ddf8ec;
+  --bg-color: #010403;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+}
+
+.icon-accent {
+  color: var(--accent-color) !important;
+  fill: var(--accent-color);
+}
+
+.rainbow-text {
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rainbow-shadow {
+  text-shadow: 0 0 4px rgba(255, 0, 0, 0.4),
+  0 1px 8px rgba(255, 165, 0, 0.4),
+  0 2px 12px rgba(255, 255, 0, 0.4),
+  0 3px 16px rgba(0, 255, 0, 0.4),
+  0 4px 20px rgba(0, 0, 255, 0.4),
+  0 5px 24px rgba(75, 0, 130, 0.4),
+  0 6px 28px rgba(238, 130, 238, 0.4);
+}
+
+.bg-rainbow {
+    background-image: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  border-radius: 14px;
+  padding: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  cursor: pointer;
+  border: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  border: none;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  cursor: pointer;
+}
+
+.cursed {
+  text-shadow: 0 2px 8px #ff5454;
+}
+
+.terminal {
+  text-shadow: 0 2px 8px #fcba03;
+}
+
+.border-accent {
+  border-color: var(--accent-color);
+}
+
+.secondary-hover {
+    transition: all 0.2s ease-in-out;
+}
+
+.secondary-hover:hover {
+  background-color: rgba(20, 20, 20, 0.5);
+}
+
+.vignette::before {
+  left: 0;
+  top: 0;
+  width: 25%;
+  z-index: 2;
+  height: 100%;
+  position: absolute;
+  content: " ";
+  background: linear-gradient(90deg, #030303, transparent);
+}
+
+.radial-color::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background: radial-gradient(circle at top, var(--color) 10%, transparent 65%);
+  content: " ";
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1d1d1d;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.shadow-color {
+  opacity: .8;
+  text-shadow: 0 2px 8px var(--color);
+  font-weight: 700;
+}
+
+.shadow-accent {
+    text-shadow: 0 2px 8px var(--accent-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.shadow-icon {
+  filter: drop-shadow(0 2px 8px var(--color));
+}
+
+.radial-color-second::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background: radial-gradient(circle at top, var(--color) 25%, transparent 80%);
+  content: " ";
+  pointer-events: none;
+}
+
+.ticker {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(105%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: scale(100%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.backdrop-radial {
+  background: radial-gradient(circle, var(--color) 25%, transparent 72%);
+}
+
+.full-radial::before {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(var(--color),transparent);
+  content: " ";
+}
+
+.vignette::after {
+  right: 0;
+  top: 0;
+  width: 25%;
+  z-index: 2;
+  height: 100%;
+  position: absolute;
+  content: " ";
+  background: linear-gradient(270deg, #030303, transparent);
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  word-break: normal;
+  tab-size: 4;
+}
+
+button {
+  color: rgb(var(--text-color));
+  background-color: var(--primary-color);
+}
+
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+input {
+  color: rgb(var(--text-color));
+  background-color: var(--primary-color);
+}
+
+.bg-radial {
+  background: radial-gradient(rgba(14, 17, 14, 0.9) 50%, rgba(3, 3, 3, 0.95) 80%);
+  opacity: 0.3;
+}
+
+.bg-color {
+  border: 3px solid var(--color);
+}
+
+:focus {
+  outline: none;
+}
+
+@layer components {
+  .bg-gradient {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  }
+
+  .bg {
+    background-color: var(--bg-color);
+  }
+
+  .primary-text-shadow {
+    text-shadow: 0 0px 8px var(--primary-color);
+  }
+
+  .text-gradient {
+    background-image: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .primary {
+    color: rgb(var(--text-color));
+    background-color: var(--primary-color);
+  }
+
+  .accent {
+    color: rgb(var(--text-color));
+    background-color: var(--accent-color);
+  }
+
+  .bg-image {
+    background-image: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(1px);
+    background-position: center;
+  }
+
+  .secondary {
+    color: rgb(var(--text-color));
+    background-color: var(--secondary-color);
+  }
+
+  .secondary-text {
+    color: rgb(241, 219, 219);
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+  border-style: solid;
+}
+
+body {
+  color: var(--text-color);
+  font-weight: 500;
+  background: var(--secondary-color);
+}

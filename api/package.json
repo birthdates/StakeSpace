@@ -1,0 +1,35 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx ts-node --esm ./index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alchemy-sdk": "^2.9.2",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.3.1",
+    "eosjs": "^22.1.0",
+    "redis": "^4.6.7",
+    "socket.io": "^4.7.1",
+    "socket.io-client": "^4.7.2",
+    "steam-totp": "^2.1.2",
+    "steam-tradeoffer-manager": "^2.10.6",
+    "steam-user": "^4.27.1",
+    "steamcommunity": "^3.46.1",
+    "websocket": "^1.0.34",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/steam-totp": "^2.1.0",
+    "@types/steam-tradeoffer-manager": "^2.10.3",
+    "@types/steam-user": "^4.26.4",
+    "@types/steamcommunity": "^3.43.2",
+    "@types/websocket": "^1.0.5"
+  }
+}
