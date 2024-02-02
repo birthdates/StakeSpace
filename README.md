@@ -94,9 +94,9 @@ This will allow trading from bots.
 
 ## Afterwards
 
+* `npm install next -g`
+* `next build`
 * `npm run build`
-
-* `npm run start`
 
 ### Starting socket **(REQUIRED)**
 
