@@ -7,7 +7,8 @@ import CrateOpen from "./CrateOpen";
 import { CasePreview } from "./CasePreview";
 import { MAX_CASES } from "@/utils/helpers/cases";
 import clsx from "clsx";
-import { formatPrice, isBigWin } from "@/utils/helpers/items";
+import { formatNumber, isBigWin } from "@/utils/helpers/items";
+import Header from "../Header";
 
 export default function CasePage({ crate }: { crate: Case }) {
   const [crateItems, setCrateItems] = useState<CaseItem[]>([]);
@@ -92,7 +93,6 @@ export default function CasePage({ crate }: { crate: Case }) {
 
   return (
     <>
-      <Header></Header>
       <div className="flex w-[50rem] flex-row mt-10 select-none justify-center grow-0 overflow-hidden h-full">
         <div className="flex flex-col items-center justify-center h-full w-full">
           <div className="flex flex-row w-full justify-center mb-10 h-full">
@@ -112,7 +112,7 @@ export default function CasePage({ crate }: { crate: Case }) {
                     className="mx-2"
                     alt={"Currency"}
                   />
-                  {formatPrice(crate.price * amount)}
+                  {formatNumber(crate.price * amount)}
                 </button>
                 <button
                   className="secondary hover-scale ml-5 flex flex-row h-full items-center justify-center text-white font-bold py-2 px-4 rounded"
@@ -153,7 +153,6 @@ export default function CasePage({ crate }: { crate: Case }) {
                 multi={amount > 1}
                 host={index === amount - 1}
                 onFinished={onFinish}
-                amount={amount}
               />
             ))}
           </div>

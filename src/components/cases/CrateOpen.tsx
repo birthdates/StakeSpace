@@ -38,7 +38,7 @@ export default function CrateOpen({
   const [shownItems, setShownItems] = useState<CaseItem[]>([]);
   const [last, setLast] = useState<number>();
   const elementRef = useRef<HTMLDivElement>(null);
-  const animationRef = useRef<NodeJS.Timer>();
+  const animationRef = useRef<any>();
   const lastPassed = useRef<number>(-1);
   const lastTranslate = useRef<number>(0);
 
