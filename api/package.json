@@ -2,16 +2,16 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx ts-node --esm ./index.ts"
+    "start": "ts-node index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "alchemy-sdk": "^2.9.2",
+    "alchemy-sdk": "^3.2.1",
     "chalk": "^4.1.2",
     "dotenv": "^16.3.1",
     "eosjs": "^22.1.0",

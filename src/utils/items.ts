@@ -115,7 +115,9 @@ export const getMarketItems = async () => {
   const url = `https://api.steamapis.com/market/items/252490?api_key=${process.env.STEAM2_API_KEY}`;
   const res = await fetch(url);
   const { data } = await res.json();
+  
   let result: MarketItem[] = [];
+  
 
   for (const item of data) {
     // Make ID of item.market_name and replace all spaces with - and make lowercase
