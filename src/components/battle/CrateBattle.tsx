@@ -214,7 +214,7 @@ export default function CrateBattle({ battle }: { battle: CrateBattle }) {
   const [currentRound, setCurrentRound] = useState(battle.round);
   const [status, setStatus] = useState<string>(battle.status);
   const [eosBlock, setEOSBlock] = useState(battle.eosBlock);
-  const timerRef = useRef<NodeJS.Timer | undefined>();
+  const timerRef = useRef<number | undefined>();
   const [wonItems, setWonItems] = useState<CaseItem[]>(battle.wonItems);
   const [teams, setTeams] = useState<Team[]>(battle.teams);
   const [animFinished, setAnimFinished] = useState(
@@ -380,7 +380,7 @@ export default function CrateBattle({ battle }: { battle: CrateBattle }) {
       if (timerRef.current) clearInterval(timerRef.current);
       timerRef.current = setInterval(() => {
         setStart((prev) => prev! - 0.05);
-      }, 500);
+      }, 500) as any;
       mapTeams(teams).then(setTeams);
       setStart(start);
     });

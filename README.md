@@ -94,7 +94,7 @@ This will allow trading from bots.
 
 ## Afterwards
 
-* `npm install next -g`
+* `npm install next@13.5.6 -g`
 * `next build`
 * `npm run build`
 
